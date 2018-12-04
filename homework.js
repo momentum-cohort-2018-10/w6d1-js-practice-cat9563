@@ -1,26 +1,64 @@
 // 1. Set the variable `name` to the string "Addison".
+var givenName = "Addison"
 
 // 2. Set candies equal to 20, people to 6, and leftover equal
 // to the remainder of dividing 20 by 6.
-
+    var candies = 20
+    var people = 6 
+    var leftover = candies%people 
 // 3. Create a function called greeting that returns "Hello, <name>!",
 // where <name> is the name given as an argument to the function.
+    function greeting(name){
+        return `Hello, ${name}!`;
+    }
+
 
 // 4. Create a function called isOdd that, given a number, will
 // return true if it is odd and false if it is not. An odd number is a
 // number which, when divided by 2, has a remainder of 1 or -1.
 
+    // function isOdd(value) {
+    //     if (value % 2 === 1) {
+    //         return true
+    //     }
+    //     if (value % 2 === -1) {
+    //         return true
+    //     }
+    //     else {
+    //         return false
+    //     }
+    // }
+    function isOdd(number) {
+        if (number%2 === 1 || number%2 === -1) 
+        return true;
+        else {
+        return false;
+        }
+    }
+
 // 5. Create a function called isEven that, given a number, will
 // return true if it is even and false if it is not. An even number is a
 // number which, when divided by 2, has a remainder of 0.
-
+    function isEven(number) {
+        if (number%2 === 0) 
+        return true;
+        else {
+        return false;
+        }
+    }
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
+    function fahrenheitToCelsius(fahrenheit) {
+        return((fahrenheit-32) * 5/9)
+       }
 
 // 6. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
+function celsiusToFahrenheit(celsius) {
+    return((celsius*9/5) + (32))
+   }
 
 // 7. Create a function called fahrenheitToKelvin that takes a
 // Fahrenheit temperature as an argument and returns the
@@ -28,28 +66,69 @@
 // fahrenheitToCelsius function.
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
+    function fahrenheitToKelvin(kelvin) {
+        return(((kelvin-32) * 5/9 + (273.15)))
+    }
 
 // 8. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
 
+    function lesser(value, value2) {
+        if (value < value2) {
+            return value
+        }
+        else {
+            return value2
+        }
+    }
+    
+
 // 9. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
 // in the specified language. The supported languages and their
 // translations are below.
-//
+
 // en - Hello, <name>!
 // es - ¡Hola, <name>!
 // fr - Bonjour, <name>!
 // eo - Saluton, <name>!
-//
-// If any other language code is used, return nothing.
 
+// If any other language code is used, return nothing.
+    function multigreeting(name, languageCode) {
+        if (languageCode === "en") {
+            return `Hello, ${name}!`
+        }
+        if (languageCode === "es") {
+            return `¡Hola, ${name}!`
+        }
+        if (languageCode === "fr") {
+            return `Bonjour, ${name}!`
+        }
+        if (languageCode === "eo") {
+            return `Saluton, ${name}!`
+        }
+    }
+    
 // 10. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
+// this wasnt my code I just was trying to learn from it. I think there might be a better to write this reached a wall for the night.
+// function sum(array) {
+//     for (
+//       var
+//         index = 0,              // The iterator
+//         length = array.length,  // Cache the array length
+//         sum = 0;                // The total amount
+//         index < length;         // The "for"-loop condition
+//         sum += array[index++]   // Add number on each iteration
+//     );
+//     return sum;
+//   }
+
 
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+
 
 // 12. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
